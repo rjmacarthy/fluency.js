@@ -8,24 +8,24 @@ description: >-
 
 ## Features
 
-* Use OpenAI's format to call 200+ LLMs from 10 providers.
-* Supports tools, JSON outputs, image inputs, streaming, and more.
-* Runs completely on the client side. No proxy server needed.
-* Free and open source under MIT.
+- Use OpenAI's format to call 200+ LLMs from 10 providers.
+- Supports tools, JSON outputs, image inputs, streaming, and more.
+- Runs completely on the client side. No proxy server needed.
+- Free and open source under MIT.
 
 ## Supported Providers
 
-* AI21
-* Anthropic
-* AWS Bedrock
-* Cohere
-* Gemini
-* Groq
-* Mistral
-* OpenAI
-* Perplexity
-* OpenRouter
-* Any other model provider with an OpenAI compatible API
+- AI21
+- Anthropic
+- AWS Bedrock
+- Cohere
+- Gemini
+- Groq
+- Mistral
+- OpenAI
+- Perplexity
+- OpenRouter
+- Any other model provider with an OpenAI compatible API
 
 ## Setup
 
@@ -33,27 +33,35 @@ description: >-
 
 {% tabs %}
 {% tab title="npm" %}
+
 ```bash
 npm install fluency.js
 ```
+
 {% endtab %}
 
 {% tab title="pnpm" %}
+
 ```bash
 pnpm install fluency.js
 ```
+
 {% endtab %}
 
 {% tab title="yarn" %}
+
 ```bash
 yarn add fluency.js
 ```
+
 {% endtab %}
 
 {% tab title="bun" %}
+
 ```bash
 bun add fluency.js
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -64,12 +72,15 @@ Import the Token.js client and call the `create` function with a prompt in OpenA
 {% tabs %}
 {% tab title="OpenAI" %}
 {% code title=".env" %}
+
 ```bash
 OPENAI_API_KEY=<openai api key>
 ```
+
 {% endcode %}
 
 {% code fullWidth="false" %}
+
 ```ts
 import { TokenJS } from 'fluency.js'
 
@@ -94,14 +105,17 @@ async function main() {
 }
 main()
 ```
+
 {% endcode %}
 {% endtab %}
 
 {% tab title="Anthropic" %}
 {% code title=".env" %}
+
 ```bash
 ANTHROPIC_API_KEY=<anthropic api key>
 ```
+
 {% endcode %}
 
 ```typescript
@@ -128,13 +142,16 @@ async function main() {
 }
 main()
 ```
+
 {% endtab %}
 
 {% tab title="Gemini" %}
 {% code title=".env" %}
+
 ```bash
 GEMINI_API_KEY=<gemini api key>
 ```
+
 {% endcode %}
 
 ```typescript
@@ -161,15 +178,18 @@ async function main() {
 }
 main()
 ```
+
 {% endtab %}
 
 {% tab title="Bedrock" %}
 {% code title=".env" %}
+
 ```bash
 AWS_REGION_NAME=<aws region>
 AWS_ACCESS_KEY_ID=<aws access key id>
 AWS_SECRET_ACCESS_KEY=<aws secret access key>
 ```
+
 {% endcode %}
 
 ```typescript
@@ -196,13 +216,16 @@ async function main() {
 }
 main()
 ```
+
 {% endtab %}
 
 {% tab title="Cohere" %}
 {% code title=".env" %}
+
 ```bash
 COHERE_API_KEY=<cohere api key>
 ```
+
 {% endcode %}
 
 ```typescript
@@ -229,13 +252,16 @@ async function main() {
 }
 main()
 ```
+
 {% endtab %}
 
 {% tab title="Mistral" %}
 {% code title=".env" %}
+
 ```bash
 MISTRAL_API_KEY=<mistral api key>
 ```
+
 {% endcode %}
 
 ```typescript
@@ -262,13 +288,16 @@ async function main() {
 }
 main()
 ```
+
 {% endtab %}
 
 {% tab title="OpenRouter" %}
 {% code title=".env" %}
+
 ```bash
 OPENROUTER_API_KEY=<openrouter api key>
 ```
+
 {% endcode %}
 
 ```typescript
@@ -295,6 +324,7 @@ async function main() {
 }
 main()
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -410,26 +440,26 @@ main()
 
 This table provides an overview of the features that Token.js supports from each LLM provider.
 
-| Provider   | Chat Completion      | Streaming            | Function Calling Tool | JSON Output          | Image Input          |
-| ---------- | -------------------- | -------------------- | --------------------- | -------------------- | -------------------- |
-| OpenAI     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark:  | :white\_check\_mark: | :white\_check\_mark: |
-| Anthropic  | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark:  | :heavy\_minus\_sign: | :heavy\_minus\_sign: |
-| Bedrock    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark:  | :white\_check\_mark: | :white\_check\_mark: |
-| Mistral    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark:  | :white\_check\_mark: | :heavy\_minus\_sign: |
-| Cohere     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark:  | :heavy\_minus\_sign: | :heavy\_minus\_sign: |
-| AI21       | :white\_check\_mark: | :white\_check\_mark: | :heavy\_minus\_sign:  | :heavy\_minus\_sign: | :heavy\_minus\_sign: |
-| Gemini     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark:  | :white\_check\_mark: | :white\_check\_mark: |
-| Groq       | :white\_check\_mark: | :white\_check\_mark: | :heavy\_minus\_sign:  | :white\_check\_mark: | :heavy\_minus\_sign: |
-| Perplexity | :white\_check\_mark: | :white\_check\_mark: | :heavy\_minus\_sign:  | :heavy\_minus\_sign: | :heavy\_minus\_sign: |
-| OpenRouter | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark:  | :white\_check\_mark: | :white\_check\_mark: |
-| OpenAI Compatible | :white\_check\_mark: | :white\_check\_mark: |  :white\_check\_mark:  |  :white\_check\_mark: |  :white\_check\_mark:  |
+| Provider          | Chat Completion    | Streaming          | Function Calling Tool | JSON Output        | Image Input        |
+| ----------------- | ------------------ | ------------------ | --------------------- | ------------------ | ------------------ |
+| OpenAI            | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
+| Anthropic         | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :heavy_minus_sign: | :heavy_minus_sign: |
+| Bedrock           | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
+| Mistral           | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :heavy_minus_sign: |
+| Cohere            | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :heavy_minus_sign: | :heavy_minus_sign: |
+| AI21              | :white_check_mark: | :white_check_mark: | :heavy_minus_sign:    | :heavy_minus_sign: | :heavy_minus_sign: |
+| Gemini            | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
+| Groq              | :white_check_mark: | :white_check_mark: | :heavy_minus_sign:    | :white_check_mark: | :heavy_minus_sign: |
+| Perplexity        | :white_check_mark: | :white_check_mark: | :heavy_minus_sign:    | :heavy_minus_sign: | :heavy_minus_sign: |
+| OpenRouter        | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
+| OpenAI Compatible | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
 
 ### Legend
 
-| Symbol               | Description                                                      |
-| -------------------- | ---------------------------------------------------------------- |
-| :white\_check\_mark: | Supported by Token.js                                            |
-| :heavy\_minus\_sign: | Not supported by the LLM provider, so Token.js cannot support it |
+| Symbol             | Description                                                      |
+| ------------------ | ---------------------------------------------------------------- |
+| :white_check_mark: | Supported by Token.js                                            |
+| :heavy_minus_sign: | Not supported by the LLM provider, so Token.js cannot support it |
 
 **Note**: Certain LLMs, particularly older or weaker models, do not support some features in this table. For details about these restrictions, see our [LLM provider documentation](providers/).
 

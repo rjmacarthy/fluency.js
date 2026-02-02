@@ -5,9 +5,11 @@
 ## Usage
 
 {% code title=".env" %}
+
 ```bash
 DEEPSEEK_API_KEY=
 ```
+
 {% endcode %}
 
 ```typescript
@@ -40,8 +42,10 @@ main()
 
 | Model             | Chat Completion | Streaming | JSON Output | Image Input | N > 1 | Function Calling |
 | ----------------- | --------------- | --------- | ----------- | ----------- | ----- | ---------------- |
-| deepseek-chat     | ✅               | ✅         | ➖           | ➖           | ➖     | ➖                |
-| deepseek-reasoner | ✅               | ✅         | ➖           | ➖           | ➖     | ➖                |
+| deepseek-chat     | ✅               | ✅         | ✅           | ➖           | ➖     | ✅                |
+| deepseek-reasoner | ✅               | ✅         | ✅           | ➖           | ➖     | ✅                |
+| deepseek-coder    | ✅               | ✅         | ✅           | ➖           | ➖     | ✅                |
+| deepseek-vl       | ✅               | ✅         | ➖           | ✅           | ➖     | ➖                |
 
 ### Legend
 | Symbol             | Description                           |
@@ -52,4 +56,4 @@ main()
 
 ## Additional Resources
 
-* [Deepseek Documentation](https://api-docs.deepseek.com/)
+- [Deepseek Documentation](https://api-docs.deepseek.com/)

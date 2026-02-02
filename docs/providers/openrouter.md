@@ -5,9 +5,11 @@
 ## Usage
 
 {% code title=".env" %}
+
 ```bash
 OPENROUTER_API_KEY=
 ```
+
 {% endcode %}
 
 ```typescript
@@ -36,9 +38,10 @@ main()
 ```
 
 ## Compatibility
+
 OpenRouter supports more than 180 models from a variety of providers which may have varying feature support. We recommend reviewing the OpenRouter and provider documentation for specific compatibility information.
 
 ## Additional Resources
 
-* [Supported Models](https://openrouter.ai/models)
-* [OpenRouter Documentation](https://openrouter.ai/docs/quick-start)
+- [Supported Models](https://openrouter.ai/models)
+- [OpenRouter Documentation](https://openrouter.ai/docs/quick-start)

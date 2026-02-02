@@ -33,8 +33,8 @@ type TokenJSInterface = {
 }
 
 export type extendedModelFeatureSupport<P extends LLMProvider> =
-  | ((typeof models)[P]['models'] extends readonly string[]
-      ? (typeof models)[P]['models'][number]
+  | (typeof models[P]['models'] extends readonly string[]
+      ? typeof models[P]['models'][number]
       : never)
   | {
       streaming: boolean

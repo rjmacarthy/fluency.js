@@ -9,16 +9,16 @@ import {
   StreamCompletionResponse,
 } from '../userTypes/index.js'
 
-export type OpenAIModel = (typeof models.openai.models)[number]
-export type AI21Model = (typeof models.ai21.models)[number]
-export type DeepseekModel = (typeof models.deepseek.models)[number]
-export type AnthropicModel = (typeof models.anthropic.models)[number]
-export type GeminiModel = (typeof models.gemini.models)[number]
-export type CohereModel = (typeof models.cohere.models)[number]
-export type BedrockModel = (typeof models.bedrock.models)[number]
-export type MistralModel = (typeof models.mistral.models)[number]
-export type PerplexityModel = (typeof models.perplexity.models)[number]
-export type GroqModel = (typeof models.groq.models)[number]
+export type OpenAIModel = typeof models.openai.models[number]
+export type AI21Model = typeof models.ai21.models[number]
+export type DeepseekModel = typeof models.deepseek.models[number]
+export type AnthropicModel = typeof models.anthropic.models[number]
+export type GeminiModel = typeof models.gemini.models[number]
+export type CohereModel = typeof models.cohere.models[number]
+export type BedrockModel = typeof models.bedrock.models[number]
+export type MistralModel = typeof models.mistral.models[number]
+export type PerplexityModel = typeof models.perplexity.models[number]
+export type GroqModel = typeof models.groq.models[number]
 export type OpenRouterModel = string
 export type OpenAICompatibleModel = string
 

@@ -6,24 +6,24 @@ This project is a fork of [token.js](https://github.com/token-js/token.js).
 
 ## Features
 
-* Use OpenAI's format to call 200+ LLMs from 10+ providers.
-* Supports tools, JSON outputs, image inputs, streaming, and more.
-* Runs completely on the client side. No proxy server needed.
-* Free and open source under MIT.
+- Use OpenAI's format to call 200+ LLMs from 10+ providers.
+- Supports tools, JSON outputs, image inputs, streaming, and more.
+- Runs completely on the client side. No proxy server needed.
+- Free and open source under MIT.
 
 ## Supported Providers
 
-* AI21
-* Anthropic
-* AWS Bedrock
-* Cohere
-* Gemini
-* Groq
-* Mistral
-* OpenAI
-* Perplexity
-* OpenRouter
-* Any other model provider with an OpenAI compatible API
+- AI21
+- Anthropic
+- AWS Bedrock
+- Cohere
+- Gemini
+- Groq
+- Mistral
+- OpenAI
+- Perplexity
+- OpenRouter
+- Any other model provider with an OpenAI compatible API
 
 ## [Documentation](https://docs.tokenjs.ai/)
 
@@ -42,6 +42,7 @@ Import the Token.js client and call the `create` function with a prompt in OpenA
 ```bash
 OPENAI_API_KEY=<openai api key>
 ```
+
 ```ts
 import { TokenJS } from 'fluency.js'
 
@@ -178,6 +179,7 @@ main()
 ### Extending Model Support
 
 Token.js allows you to extend the predefined model list using the `extendModelList` method. Here are some example scenarios where this is useful:
+
 1. Adding AWS Bedrock models with regional prefixes like `us.anthropic.claude-3-sonnet`
 2. Supporting new model versions before they're added to the predefined list
 3. Using custom model deployments with unique names
@@ -187,13 +189,13 @@ Token.js allows you to extend the predefined model list using the `extendModelLi
 import { TokenJS } from 'fluency.js'
 
 // Example in 2 steps: Adding AWS Bedrock Claude models with region prefix
-const tokenjs = new TokenJS();
+const tokenjs = new TokenJS()
 // Step 1: Register the new model name
 tokenjs.extendModelList(
-  "bedrock",
+  'bedrock',
   'us.anthropic.claude-3-5-sonnet-20241022-v2:0',
-  "anthropic.claude-3-sonnet-20240229-v1:0" // Copy features from existing model
-);
+  'anthropic.claude-3-sonnet-20240229-v1:0' // Copy features from existing model
+)
 
 // Step 2: Using the extended model in a chat completion
 const result = await tokenjs.chat.completions.create({
@@ -206,44 +208,46 @@ const result = await tokenjs.chat.completions.create({
       content: 'Tell me about yourself.',
     },
   ],
-});
+})
 ```
 
 Note: When using extended models, type casting (`as any`) is required
 
 The `featureSupport` parameter can be either:
+
 - A string matching an existing model name from the same provider to copy its feature support
 - An object specifying which features the model supports:
-  | Feature    | Type    | Description                                  |
+  | Feature | Type | Description |
   |------------|---------|----------------------------------------------|
-  | streaming  | boolean | Whether the model supports streaming responses|
-  | json       | boolean | Whether the model supports JSON mode         |
-  | toolCalls  | boolean | Whether the model supports function calling  |
-  | images     | boolean | Whether the model supports image inputs      |
+  | streaming | boolean | Whether the model supports streaming responses|
+  | json | boolean | Whether the model supports JSON mode |
+  | toolCalls | boolean | Whether the model supports function calling |
+  | images | boolean | Whether the model supports image inputs |
 
 ## Feature Compatibility
 
 This table provides an overview of the features that Token.js supports from each LLM provider.
 
-| Provider   | Chat Completion           | Streaming            | Function Calling Tool                | JSON Output          | Image Input          |
-| ---------- | -------------------- | -------------------- | -------------------- | -------------------- | -------------------- |
-| OpenAI     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Anthropic  | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Bedrock    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Mistral    | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |  :heavy_minus_sign:  |
-| Cohere     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |  :heavy_minus_sign:  |  :heavy_minus_sign:  |
-| AI21       | :white\_check\_mark: | :white\_check\_mark: |  :heavy_minus_sign:  |  :heavy_minus_sign:  |  :heavy_minus_sign:  |
-| Gemini     | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: | :white\_check\_mark: |
-| Groq       | :white\_check\_mark: | :white\_check\_mark: |  :heavy_minus_sign:  | :white\_check\_mark: |  :heavy_minus_sign:  |
-| Perplexity | :white\_check\_mark: | :white\_check\_mark: |  :heavy_minus_sign:  |  :heavy_minus_sign:  |  :heavy_minus_sign:  |
-| OpenRouter | :white\_check\_mark: | :white\_check\_mark: |  :white\_check\_mark:  |  :white\_check\_mark: |  :white\_check\_mark:  |
-| OpenAI Compatible | :white\_check\_mark: | :white\_check\_mark: |  :white\_check\_mark:  |  :white\_check\_mark: |  :white\_check\_mark:  |
+| Provider          | Chat Completion    | Streaming          | Function Calling Tool | JSON Output        | Image Input        |
+| ----------------- | ------------------ | ------------------ | --------------------- | ------------------ | ------------------ |
+| OpenAI            | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
+| Anthropic         | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
+| Bedrock           | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
+| Mistral           | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :heavy_minus_sign: |
+| Cohere            | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :heavy_minus_sign: | :heavy_minus_sign: |
+| AI21              | :white_check_mark: | :white_check_mark: | :heavy_minus_sign:    | :heavy_minus_sign: | :heavy_minus_sign: |
+| Gemini            | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
+| Groq              | :white_check_mark: | :white_check_mark: | :heavy_minus_sign:    | :white_check_mark: | :heavy_minus_sign: |
+| Perplexity        | :white_check_mark: | :white_check_mark: | :heavy_minus_sign:    | :heavy_minus_sign: | :heavy_minus_sign: |
+| OpenRouter        | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
+| OpenAI Compatible | :white_check_mark: | :white_check_mark: | :white_check_mark:    | :white_check_mark: | :white_check_mark: |
 
 ### Legend
-| Symbol             | Description                           |
-|--------------------|---------------------------------------|
-| :white_check_mark: | Supported by Token.js                 |
-| :heavy_minus_sign: | Not supported by the LLM provider, so Token.js cannot support it     |
+
+| Symbol             | Description                                                      |
+| ------------------ | ---------------------------------------------------------------- |
+| :white_check_mark: | Supported by Token.js                                            |
+| :heavy_minus_sign: | Not supported by the LLM provider, so Token.js cannot support it |
 
 **Note**: Certain LLMs, particularly older or weaker models, do not support some features in this table. For details about these restrictions, see our [LLM provider documentation](https://docs.tokenjs.ai/providers).
 

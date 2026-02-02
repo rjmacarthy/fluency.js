@@ -10,7 +10,6 @@ import {
   GenerateContentResult,
   GenerateContentStreamResult,
   GoogleGenerativeAI,
-  InlineDataPart,
   Part,
   TextPart,
   Tool,
@@ -99,7 +98,7 @@ export const convertContentsToParts = async (
             mimeType: imageData.mimeType,
             data: imageData.content,
           },
-        } satisfies InlineDataPart
+        }
       } else {
         throw new InputError(
           `Invalid content part type: ${

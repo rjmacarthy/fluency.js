@@ -11,7 +11,6 @@ import {
   SystemContentBlock,
   Tool,
   ToolChoice,
-  ToolConfiguration,
   ToolSpecification,
 } from '@aws-sdk/client-bedrock-runtime'
 import { ChatCompletionMessageToolCall } from 'openai/resources/index'
@@ -369,11 +368,11 @@ export const convertToolParams = (
       ? tools.map((tool) => {
           const inputSchema: ToolSpecification['inputSchema'] | undefined = tool
             .function.parameters
-            ? ({
+            ? {
                 // Bedrock and OpenAI's function parameter types are incompatible even though they both
                 // adhere to the JSON schema, so we set the type to `any` to prevent a TypeScript error.
                 json: tool.function.parameters as any,
-              } satisfies ToolSpecification['inputSchema'])
+              }
             : undefined
           return {
             toolSpec: {
@@ -381,7 +380,7 @@ export const convertToolParams = (
               description: tool.function.description,
               inputSchema,
             },
-          } satisfies Tool
+          }
         })
       : undefined
 
@@ -397,7 +396,7 @@ export const convertToolParams = (
   return {
     toolChoice: convertedToolChoice,
     tools: convertedTools,
-  } satisfies ToolConfiguration
+  }
 }
 
 const convertStopReason = (

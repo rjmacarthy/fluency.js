@@ -5,9 +5,11 @@
 ## Usage
 
 {% code title=".env" %}
+
 ```bash
 PERPLEXITY_API_KEY=
 ```
+
 {% endcode %}
 
 ```typescript
@@ -53,4 +55,4 @@ main()
 
 ## Additional Resources
 
-* [Perplexity Documentation](https://docs.perplexity.ai/)
+- [Perplexity Documentation](https://docs.perplexity.ai/)

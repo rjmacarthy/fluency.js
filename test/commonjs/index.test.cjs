@@ -1,5 +1,5 @@
-const { expect } = require('@jest/globals');
-const { TokenJS } = require('../../dist/index.cjs');
+const { expect } = require('@jest/globals')
+const { TokenJS } = require('../../dist/index.cjs')
 
 describe('Does work with CommonJS', () => {
   it('throws an error for a number greater than the max temperature', async () => {
@@ -13,4 +13,4 @@ describe('Does work with CommonJS', () => {
       })
     ).rejects.toThrow()
   })
-});
+})

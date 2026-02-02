@@ -5,9 +5,11 @@
 ## Usage
 
 {% code title=".env" %}
+
 ```bash
 COHERE_API_KEY=
 ```
+
 {% endcode %}
 
 ```typescript
@@ -40,12 +42,13 @@ main()
 
 | Model                 | Chat Completion | Streaming | JSON Output | Image Input | Function Calling | N > 1 |
 | --------------------- | --------------- | --------- | ----------- | ----------- | ---------------- | ----- |
-| command-r-plus        | ✅               | ✅         | ➖           | ➖           | ✅                | ➖     |
-| command-r             | ✅               | ✅         | ➖           | ➖           | ✅                | ➖     |
+| command-r-plus        | ✅               | ✅         | ✅           | ➖           | ✅                | ➖     |
+| command-r             | ✅               | ✅         | ✅           | ➖           | ✅                | ➖     |
 | command               | ✅               | ✅         | ➖           | ➖           | ➖                | ➖     |
-| command-nightly       | ✅               | ✅         | ➖           | ➖           | ✅                | ➖     |
+| command-nightly       | ✅               | ✅         | ✅           | ➖           | ✅                | ➖     |
 | command-light         | ✅               | ✅         | ➖           | ➖           | ➖                | ➖     |
 | command-light-nightly | ✅               | ✅         | ➖           | ➖           | ➖                | ➖     |
+| aya                   | ✅               | ✅         | ✅           | ➖           | ✅                | ➖     |
 
 ### Legend
 | Symbol             | Description                           |
@@ -56,4 +59,4 @@ main()
 
 ## Additional Resources
 
-* [Cohere Documentation](https://docs.cohere.com)
+- [Cohere Documentation](https://docs.cohere.com)
